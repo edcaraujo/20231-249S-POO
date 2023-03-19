@@ -9,20 +9,21 @@ namespace example_008
     internal class Conta
     {
         public int codigo;
-        public float saldo = 1000.0f;
+        public float saldo;
         public string tipo;
         public string dono;
 
-        public Conta()
-        {
-            saldo = 1000.0f;
-        }
+      
 
         public Conta(int pcodigo)
 
         {
             codigo = pcodigo;
         }
+
+
+
+
 
         public Conta(int pcodigo, 
                 float psaldo, 

@@ -13,6 +13,10 @@ namespace exemplo_001
         public string tipo;
         public string dono;
 
+        public Conta()
+        {
+
+        }
         public void sacar(float valor)
         {
             saldo -= valor;
