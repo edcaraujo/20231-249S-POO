@@ -10,14 +10,7 @@ namespace papinhaRPG_001
     {
         public Mago() : base()
         {
-            Forca = 5;
-            Vitalidade = 18;
-            Inteligencia = 25;
-            Destreza = 12;
-            Vida = 20;
-            MaxVida = 20;
-            Energia = 30;
-            MaxEnergia = 30;
+            
         }
     }
 }

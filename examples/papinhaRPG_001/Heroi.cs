@@ -22,10 +22,21 @@ namespace papinhaRPG_001
         {
             Nome = "Desconhecido";
             Nivel = 1;
+
+            Random random = new Random((int)DateTime.Now.ToFileTime());
+
+            Forca = random.Next(100);
+            Vitalidade = random.Next(100);
+            Inteligencia = random.Next(100);
+            Destreza = random.Next(100);
+            Vida = random.Next(100);
+            MaxVida = Vida;
+            Energia = random.Next(100);
+            MaxEnergia = Energia;
         }
         public void status()
         {
-            Console.WriteLine($"===== {Nome} - lvl. {Nivel} (Heroi) ======");
+            Console.WriteLine($"===== {Nome} - lvl. {Nivel} ({this.GetType().Name}) ======");
             Console.WriteLine($"Vida: {Vida}/{MaxVida}");
             Console.WriteLine($"Energia: {Energia}/{MaxEnergia}");
             Console.WriteLine($"Forca: {Forca}");
@@ -44,7 +55,8 @@ namespace papinhaRPG_001
 
             if (heroi.Vida - dano >= 0)
             {
-                heroi.Vida = heroi.Vida - dano;
+                if (dano > 0)
+                    heroi.Vida = heroi.Vida - dano;
             }
             else
             {
